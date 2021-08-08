@@ -1,0 +1,10 @@
+name: MDCHeroes
+version: 1.0.0-SNAPSHOT-@apiversion@
+description: MDCHeroes
+authors: [ DartPower, BLitZzMc ]
+website: https://github.com/dptmc/MDCHeroes
+main: io.dpteam.MDCHeroes.Main
+commands:
+   heroes:
+   dc:
+   marvel:

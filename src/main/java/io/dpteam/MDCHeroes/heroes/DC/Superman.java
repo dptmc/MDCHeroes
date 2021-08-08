@@ -1,12 +1,8 @@
 package io.dpteam.MDCHeroes.heroes.DC;
 
-import java.util.Iterator;
 import io.dpteam.MDCHeroes.Main;
 import io.dpteam.MDCHeroes.manager.Heroes;
 import io.dpteam.MDCHeroes.manager.PlayerData;
-import net.minecraft.server.v1_17_R1.PacketPlayOutTitle;
-import net.minecraft.server.v1_17_R1.IChatBaseComponent.ChatSerializer;
-import net.minecraft.server.v1_17_R1.PacketPlayOutTitle.EnumTitleAction;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -21,6 +17,8 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+
+import java.util.Iterator;
 
 public class Superman implements Listener {
 	public Superman() {
@@ -96,8 +94,8 @@ public class Superman implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Integer.MAX_VALUE, 0));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, 0));
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Integer.MAX_VALUE, 0));
-			PacketPlayOutTitle Kryptonite = new PacketPlayOutTitle(EnumTitleAction.ACTIONBAR, ChatSerializer.a("{\"text\":\"Kryptonite is nearby!\"}"));
-			((CraftPlayer)player.getPlayer()).getHandle().playerConnection.sendPacket(Kryptonite);
+			//PacketPlayOutTitle Kryptonite = new PacketPlayOutTitle(EnumTitleAction.ACTIONBAR, ChatSerializer.a("{\"text\":\"Kryptonite is nearby!\"}"));
+			//((CraftPlayer)player.getPlayer()).getHandle().playerConnection.sendPacket(Kryptonite);
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Main.getPlugin(), () -> {
 				PlayerData.cooldownKryptonite.remove(player.getName());
 				PlayerData.cooldownFlight.remove(player.getName());
@@ -112,8 +110,8 @@ public class Superman implements Listener {
 				player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 2));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE, 0));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, 0));
-				PacketPlayOutTitle Recovered = new PacketPlayOutTitle(EnumTitleAction.ACTIONBAR, ChatSerializer.a("{\"text\":\"You have recovered!\"}"));
-				((CraftPlayer)player.getPlayer()).getHandle().playerConnection.sendPacket(Recovered);
+				//PacketPlayOutTitle Recovered = new PacketPlayOutTitle(EnumTitleAction.ACTIONBAR, ChatSerializer.a("{\"text\":\"You have recovered!\"}"));
+				//((CraftPlayer)player.getPlayer()).getHandle().playerConnection.sendPacket(Recovered);
 			}, 100L);
 		}
 

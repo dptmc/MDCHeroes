@@ -1,0 +1,39 @@
+############################################################################
+#                        Heroes - DC & Marvel Configuration                #
+#                           Plugin created by BLitZzMc                     #
+############################################################################
+
+# Permissions:
+# - heroes.commands
+# - heroes.commands.human
+# - heroes.dc.commands
+# - heroes.dc.flash
+# - heroes.dc.flash.dash
+# - heroes.dc.superman
+# - heroes.dc.superman.flight
+# - heroes.marvel.commands
+# - heroes.marvel.thor
+# - heroes.marvel.thor.strike
+# - heroes.marvel.ironman
+# - heroes.marvel.ironman.suit
+
+# Players in GameMode will be unable to run commands
+# If players change to GameMode they will be set back to survival
+DisableGameMode: false
+
+# When 'true' players who disconnect from the server will be set back to human
+# If 'false' players will keep their selected hero
+RemoveOnLeave: true
+
+# When 'true' fall damage will be disabled
+# Fall damage will only be disabled in selected worlds
+DisableFallDamage: false
+
+# When 'true' Superman will be affected by the selected block.
+Kryptonite: true
+
+# Material that Superman is affected by.
+KryptoniteMaterial: "EMERALD_BLOCK"
+
+# How far the Kryptonite will reach (Blocks)
+KryptoniteRadius: 5
